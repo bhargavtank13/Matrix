@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 700px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  /* Table Styling */
+  .table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .scrollable-table {
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: block; /* Make it a block element */
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: left; 
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;  
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Button styling */
+  .pagination-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
+  .pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for text and dropdowns */
+  .pagination-controls label {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+  
+  .pagination-controls select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .pagination-controls select:focus {
+    border-color: #007bff;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .pagination-controls {
+      flex-direction: column;
+    }
+  
+    .pagination-controls button,
+    .pagination-controls select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .action-icons {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  .action-icons:hover {
+    color: #0056b3;
+  }
+  
+  .col-number {
+    width: 10%;
+  }
+  
+  .col-name {
+    width: 30%;
+  }
+  
+  .col-email {
+    width: 35%;
+  }
+  
+  .col-actions {
+    width: 10%;
+    text-align: center; /* Center align icons */
+  }
+  
+  .loading-spinner {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  select {
+    margin-left: 10px;
+  }

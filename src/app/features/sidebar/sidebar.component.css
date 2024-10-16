@@ -1,0 +1,37 @@
+/* sidebar.component.css */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    height: 100vh; /* Full height */
+    position: fixed; /* Make it fixed */
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+    padding: 15px; /* Add some padding */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add some shadow */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Add margin between items */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    padding: 10px;
+    display: block; /* Make link occupy full width */
+}
+
+.sidebar ul li a:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: white; /* Change text color */
+}

@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Add New Sales Rep</h2>
+  
+    <form [formGroup]="salesRepForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="saleRepName">Sales Rep Name</label>
+        <input type="text" id="saleRepName" formControlName="saleRepName" class="form-control"
+          placeholder="Enter Sales Rep Name" />
+      </div>
+  
+      <div class="form-group">
+        <label for="saleRepEmail">Sales Rep Email</label>
+        <input type="email" id="saleRepEmail" formControlName="saleRepEmail" class="form-control"
+          placeholder="Enter Sales Rep Email" />       
+      </div>
+
+      <div class="form-group">
+        <label for="regionalSaleDirectorId">Regional Sales Director</label>
+        <select id="regionalSaleDirectorId" formControlName="regionalSaleDirectorId" class="form-control">
+          <option *ngFor="let director of regionalDirector" [value]="director.regionalSaleDirectorId">{{ director.regionalSaleDirectorName }}</option>
+        </select>
+      </div>
+      
+  
+      <button type="submit" class="btn btn-primary" [disabled]="salesRepForm.invalid">
+        Add Sales Rep 
+      </button>
+    </form>
+  </div>

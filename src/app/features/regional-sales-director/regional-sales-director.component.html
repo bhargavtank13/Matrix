@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Style Customer List</title>
+</head>
+
+<body>
+  <div class="container">
+    <p-button class="p-button-success" label="Add Regional Director" (click)="addRegionalSalesDirector()" />
+    <span class="float-right">Total Regional Sales Director: {{ totalRecords }}</span>
+    <h2>Regional Sales Director List </h2>
+    <div *ngIf="loading" class="loading-spinner">
+      Loading...
+    </div>
+    <p-table [value]="regionalDirector" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-regionalSalesDirector>
+        <tr>
+          <td>{{ regionalSalesDirector.regionalSaleDirectorName }}</td>
+          <td>{{ regionalSalesDirector.regionalSaleDirectorEmail }}</td>
+          <td> <i class="fas fa-edit action-icons"
+              (click)="editRegional(regionalSalesDirector.regionalSaleDirectorId)"></i>
+            <i class="fas fa-trash action-icons" (click)="deleteRegional(regionalSalesDirector.regionalSaleDirectorId)"></i>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+</body>
+
+</html>

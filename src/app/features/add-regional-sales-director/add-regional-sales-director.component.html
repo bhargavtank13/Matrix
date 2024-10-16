@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Add New Regional Sales Director</h2>
+  
+    <form [formGroup]="regionalSalesDirectorForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="RegionalSaleDirectorName">Regional Sales Director Name</label>
+        <input type="text" id="RegionalSaleDirectorName" formControlName="RegionalSaleDirectorName" class="form-control"
+          placeholder="Enter Reginal Sales Director Name" />
+      </div>
+  
+      <div class="form-group">
+        <label for="RegionalSaleDirectorEmail">Regional Sales Director Email</label>
+        <input type="email" id="RegionalSaleDirectorEmail" formControlName="RegionalSaleDirectorEmail" class="form-control"
+          placeholder="Enter Reginal Sales Director Email" />       
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="regionalSalesDirectorForm.invalid">
+        Add Regional Sales Director
+      </button>
+    </form>
+  </div>

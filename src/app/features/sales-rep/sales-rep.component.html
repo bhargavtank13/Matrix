@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Style Customer List</title>
+</head>
+
+<body>
+  <div class="container">
+    <p-button class="p-button-success" label="Add Sales Rep" (click)="addSalesRep()" />
+    <span class="float-right">Total Sales Rep: {{ totalRecords }}</span>
+    <h2>Sales Rep List </h2>
+    <div *ngIf="loading" class="loading-spinner">
+      Loading...
+    </div>
+    <p-table [value]="salesRep" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Regional Sales Director</th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-sales>
+        <tr>
+          <td>{{ sales.saleRepName }}</td>
+          <td>{{ sales.saleRepEmail }}</td>
+          <td>{{ sales.regionalSaleDirector.regionalSaleDirectorName }}</td>
+          <td> <i class="fas fa-edit action-icons"
+              ></i>
+            <i class="fas fa-trash action-icons" ></i>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+  </div>
+</body>
+
+</html>
